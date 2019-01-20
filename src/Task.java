@@ -1,29 +1,41 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Task {
-	private static List<String> tasks = new ArrayList<>();
+	private String description;
+	private String deadline;
+	private String completion;
 
-	public void add(String task) {
-		tasks.add(task);
-		System.out.println("Tasks in the list: " + tasks.size());
+	public Task(String description) {
+		this.description = description;
+		this.completion = "No";
+		this.deadline = "NIL";
 	}
 
-	public boolean isEmpty() {
-		return tasks.isEmpty();
+	public Task(String description, String deadline) {
+		this.description = description;
+		this.deadline = deadline;
+		this.completion = "No";
 	}
 
-	public int size() {
-		return tasks.size();
+	public String getDescription() {
+		return description;
 	}
 
-	public String get(int index) {
-		return tasks.get(index);
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public void print() {
-		for (int i = 0; i < tasks.size(); i++) {
-			System.out.println("[" + (i+1) + "]" + tasks.get(i));
-		}
+	public String getDeadline() {
+		return deadline;
+	}
+
+	public void setDeadline(String deadline) {
+		this.deadline = deadline;
+	}
+
+	public String getCompletion() {
+		return completion;
+	}
+
+	public void setCompletion(String completion) {
+		this.completion = completion;
 	}
 }
