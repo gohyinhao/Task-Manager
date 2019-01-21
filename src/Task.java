@@ -6,7 +6,7 @@ public class Task {
 	public Task(String description) {
 		this.description = description;
 		this.completion = "No";
-		this.deadline = "NIL";
+		this.deadline = null;
 	}
 
 	public Task(String description, String deadline) {
@@ -38,4 +38,21 @@ public class Task {
 	public void setCompletion(String completion) {
 		this.completion = completion;
 	}
+
+	public boolean descriptionIsEmpty() {
+		if (description == null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean deadlineIsEmpty() {
+		if (deadline == null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 }
